@@ -1,0 +1,126 @@
+ /* Element */
+ p{
+      
+    font-family: Poppins;
+    font-size: 36px;
+    margin: 50px;
+    margin-top: 100px;
+    margin-left: 900px;
+  }
+  
+h1{
+    text-align: center;  
+    font-family: Poppins;
+
+}
+
+ /*ID selector*/
+
+ #div1{
+    padding-top: 86px;
+    float:right;
+ }
+
+ #div1-1{
+    margin-right:190px; 
+    background-color:#FAF1E6; 
+    height: 586px; width: 420px; 
+    border: 5px solid #FAF1E6;  
+    border-radius: 2.50%;
+ }
+
+ #pgh1{
+    padding-top: 15px ;
+    margin: 10px; 
+    text-align: justify;
+    font-family: 'Poppins'; 
+    font-size: 89%;
+ }
+
+ #div2{
+    padding-top: 20px;  
+    float: left;
+ }
+
+ #div2-1{
+    padding-left: 250; 
+    margin-bottom:  10px;
+ }
+
+ #img2-1{
+    height:250px; 
+    border: 10px; 
+    margin-left: 20px; 
+    border: 5px solid #FAF1E6; 
+    border-radius:50%;
+ }
+
+ #pgh2{
+    text-align: center; 
+    padding-left: 259px; 
+    font-family: 'Poppins'; 
+    font-size: 20px;
+ }
+
+ 
+
+ #fb{
+    height: 40px; 
+    margin:3px; 
+    border: 5px solid #DEBA9D; 
+    border-radius:50%;
+ }
+
+ #insta{
+    height:45px; 
+    margin:5px;
+    border: 5px; 
+    border-radius:50%;
+ }
+
+ #twitter{
+    height:45px;
+    margin:5px;
+    border: 5px;
+    border-radius:50%;
+ }
+
+ #div4{
+    padding-top: 410px; 
+    padding-left: 190px;
+ }
+
+ #div4-1{
+    background-color:#FAF1E6; 
+    height: 35%; 
+    width: 35%; 
+    border: 5px solid #FAF1E6;  
+    border-radius: 2.50%;
+ }
+
+ #pgh3{
+    margin: 10px; 
+    text-align: center; 
+    font-style: italic; 
+    font-family: 'Poppins'; 
+    font-size: 15px;
+ }
+
+ #pgh3-1{
+    margin: 10px; 
+    padding-top: 15px; 
+    text-align: justify;  
+    font-family: 'Poppins'; 
+    font-size: 87%;
+ } 
+
+ /*Class selector*/
+
+ .div3{
+    padding-bottom: 20px; 
+    padding-left: 315px;
+ }
+
+ .div3-1{
+    float: left;
+ }
