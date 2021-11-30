@@ -16,12 +16,12 @@
           <form action="#" class="sign-in-form">
             <h2 class="title" style="text-align: center;">Welcome!<br> Sampaloc Manila <br>E-Barangay Information</h2>
               <p style="font-style: italic;">Brgy. 401, Zone 41</p>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
+            <div class="input-field" style="max-width: 380px; width: 100%; height: 55px;">
+              <i class="fas fa-user" style="line-height: 55px;"></i>
               <input type="text" placeholder="Username" />
             </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
+            <div class="input-field" style="max-width: 380px; width: 100%; height: 55px;">
+              <i class="fas fa-lock" style="line-height: 55px;"></i>
               <input type="password" placeholder="Password" />
             </div>
             <input type="submit" value="Login" class="btn solid" />
@@ -29,15 +29,21 @@
           </form>
 		  
           <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
+            <h2 class="title" >Sign up</h2>
             <!--Name-->
-            <div class="input-field">
+            <div class="row">
+							<div class="col">
+                <div class="input-field">
+                <i class="fas fa-user"></i>
+                  <input type="text"  placeholder="First Name" />
+                </div>
+              </div>
+            <div class="col" style="float: right;">
+			      <div class="input-field" style="float: right;">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="First Name" />
+              <input type="text"  placeholder="Last Name" />
             </div>
-			      <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Last Name" />
+            </div>
             </div>
             <!--Bday-->
             <div class="input-field">
