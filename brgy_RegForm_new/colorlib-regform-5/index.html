@@ -34,7 +34,8 @@
                     <h2 class="title">Barangay Registration Form</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST">  
+                        <h2 class="title" style="color: black; padding-bottom: 20px;">BASIC INFORMATION</h2>
                          <!-- RESIDENT ID-->
                         <div class="form-row">
                             <div class="name">Resident ID</div>
@@ -255,8 +256,151 @@
                             </div>
                           </div>
 
+                          <h2 class="title" style="color: black; padding-top: 40px; padding-bottom: 20px;">CONTACT INFORMATION</h2>
+                          <!-- CITY ADDRESS-->
+                          <div class="form-row">
+                            <div class="name">City Address</div>
+                              <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5" placeholder="City Address" type="text" name="c_Add">
+                                </div>
+                              </div>
+                            </div>
+                          <!-- PROVINCIAL ADDRESS-->
+                          <div class="form-row">
+                            <div class="name">Provincial Address</div>
+                              <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5" placeholder="Provincial Address" type="text" name="pr_Add">
+                                </div>
+                              </div>
+                            </div>
+                          <!-- PUROK-->
+                          <div class="form-row">
+                            <div class="name">Purok</div>
+                              <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5" placeholder="Purok" type="text" name="purok">
+                                </div>
+                              </div>
+                            </div>
+                          <!-- HOME NUMBER 1 || HOME NUMBER 2-->
+                          <div class="form-row">
+                            <div class="name">Home Number</div>
+                              <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-1">
+                                        <div class="input-group" style="padding-left: 15px;">
+                                         <input class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 1" type="numbers" name="h_Num1">
+                                        </div>
+                                    </div>                                 
+                                     <div class="col-1">
+                                          <div class="input-group">
+                                            <input class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 2 (optional)" type="numbers" name="h_Num2">
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- MOBILE NUMBER 1 || MOBILE NUMBER 2-->
+                          <div class="form-row">
+                            <div class="name">Mobile Number</div>
+                              <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-1">
+                                        <div class="input-group" style="padding-left: 15px;">
+                                         <input class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 1" type="numbers" name="mb_Num1">
+                                        </div>
+                                    </div>                                 
+                                     <div class="col-1">
+                                          <div class="input-group">
+                                            <input class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 2 (optional)" type="numbers" name="mb_Num2">
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- EMAIL-->
+                          <div class="form-row">
+                            <div class="name">E-mail</div>
+                              <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5" placeholder="E-mail" type="text" name="email">
+                                </div>
+                              </div>
+                            </div>
+
+                            <h2 class="title" style="color: black; padding-top: 40px; padding-bottom: 20px;">REGISTRATION DETAILS</h2>
+                          <!-- RESIDENT TYPE-->
+                          <div class="form-row">
+                            <div class="name">Resident Type</div>
+                              <div class="value">
+                                <div class="row row-space">    
+                                       <div class="col-1">
+                                          <div class="input-group" style="width: 495px; padding-left: 15px;">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="subject">
+                                              <option disabled="disabled" selected="selected">Resident Type</option>
+                                              <option>Rentee</option>
+                                              <option>Native</option>
+                                            </select>
+                                          <div class="select-dropdown"></div>
+                                       </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- RESIDENT STATUS-->
+                          <div class="form-row">
+                            <div class="name">Resident Status</div>
+                              <div class="value">
+                                <div class="row row-space">    
+                                       <div class="col-1">
+                                          <div class="input-group" style="width: 495px; padding-left: 15px;">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="subject">
+                                              <option disabled="disabled" selected="selected">Resident Status</option>
+                                              <option>Active</option>
+                                              <option>Inactive</option>
+                                              <option>Deceased</option>
+                                            </select>
+                                          <div class="select-dropdown"></div>
+                                       </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          <!-- DATE & TIME REGISTERED-->
+                          <div class="form-row">
+                            <div class="name">Date & Time</div>
+                            <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5"  type="numbers" name="r_Id">
+                                </div>
+                            </div>
+                           </div>
+                          <!-- PROCESSED BY-->
+                          <div class="form-row">
+                            <div class="name">Processed By</div>
+                              <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5" type="text" name="pr_By">
+                                </div>
+                              </div>
+                            </div>
+                          <!-- TRANSACTION ID-->
+                          <div class="form-row">
+                            <div class="name">Transaction ID</div>
+                            <div class="value">
+                                <div class="input-group" style="padding-left: 15px;">
+                                    <input  class="input--style-5" type="numbers" name="tr_Id">
+                                </div>
+                            </div>
+                          </div>
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--red" style="width: 571px;"  type="submit">Register</button>
                         </div>
                     </form>
                 </div>
