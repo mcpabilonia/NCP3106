@@ -41,10 +41,6 @@
 						<span>Certificate Insurance</span></a>
 				</li>
 				<li>
-					<a href="Barangay Acc.php"><span class="las la-circle"></span>
-						<span>Accounts</span></a>
-				</li>
-				<li>
 					<a href="Barangay Config.php"><span class="las la-cog"></span>
 						<span>Barangay Config</span></a>
 				</li>
@@ -73,7 +69,26 @@
 			<div class="cards">
 				<div class="card-single">
 					<div>
-						<h1>1,012</h1>
+						<?php
+						error_reporting(0);
+
+						$conn = mysqli_connect("localhost", "root", "", "brgy_db") or die(mysqli_error());
+
+						$query = "SELECT COUNT(*) AS count FROM brgyy_db";
+
+						$query_result = mysqli_query($conn, $query);
+
+						while ($row = mysqli_fetch_assoc($query_result)) {
+							$output = $row['count'];
+						}
+
+
+						$sql = "SELECT * FROM brgyy_db";
+
+						$result = mysqli_query($conn, $sql);
+
+						?>
+						<h1><?php echo $output; ?></h1>
 						<span>Total Registered Population</span>
 					</div>
 					<div>
@@ -82,7 +97,26 @@
 				</div>
 				<div class="card-single">
 					<div>
-						<h1>79</h1>
+						<?php
+						error_reporting(0);
+
+						$conn = mysqli_connect("localhost", "root", "", "brgy_db") or die(mysqli_error());
+
+						$query = "SELECT COUNT(*) AS count FROM brgyy_db WHERE sex = 'Male'";
+
+						$query_result = mysqli_query($conn, $query);
+
+						while ($row = mysqli_fetch_assoc($query_result)) {
+							$output = $row['count'];
+						}
+
+
+						$sql = "SELECT * FROM brgyy_db";
+
+						$result = mysqli_query($conn, $sql);
+
+						?>
+						<h1><?php echo $output; ?></h1>
 						<span>Male</span></span>
 					</div>
 					<div>
@@ -91,7 +125,26 @@
 				</div>
 				<div class="card-single">
 					<div>
-						<h1>124</h1>
+						<?php
+						error_reporting(0);
+
+						$conn = mysqli_connect("localhost", "root", "", "brgy_db") or die(mysqli_error());
+
+						$query = "SELECT COUNT(*) AS count FROM brgyy_db WHERE sex = 'Female'";
+
+						$query_result = mysqli_query($conn, $query);
+
+						while ($row = mysqli_fetch_assoc($query_result)) {
+							$output = $row['count'];
+						}
+
+
+						$sql = "SELECT * FROM brgyy_db";
+
+						$result = mysqli_query($conn, $sql);
+
+						?>
+						<h1><?php echo $output; ?></h1>
 						<span>Female</span>
 					</div>
 					<div>
@@ -100,7 +153,26 @@
 				</div>
 				<div class="card-single">
 					<div>
-						<h1>894</h1>
+						<?php
+						error_reporting(0);
+
+						$conn = mysqli_connect("localhost", "root", "", "brgy_db") or die(mysqli_error());
+
+						$query = "SELECT COUNT(*) AS count FROM brgyy_db WHERE voter_status = 'Yes'";
+
+						$query_result = mysqli_query($conn, $query);
+
+						while ($row = mysqli_fetch_assoc($query_result)) {
+							$output = $row['count'];
+						}
+
+
+						$sql = "SELECT * FROM brgyy_db";
+
+						$result = mysqli_query($conn, $sql);
+
+						?>
+						<h1><?php echo $output; ?></h1>
 						<span>REGISTERED VOTERS</span>
 					</div>
 					<div>
@@ -115,7 +187,7 @@
 						<div class="card-header">
 							<h3>Puroks/Areas</h3>
 
-							<button>See all <span class="las la-arrow-down"></span></button>
+							<button> <span class="las la-plus"></span> Add Purok</button>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
@@ -127,56 +199,6 @@
 											<td>Status</td>
 										</tr>
 									</thead>
-									<tbody>
-										<tr>
-											<td>UI/UX Design</td>
-											<td>UI team</td>
-											<td>
-												<span class="status purple"></span>
-												review
-											</td>
-										</tr>
-										<tr>
-											<td>Web Development</td>
-											<td>Frontend</td>
-											<td>
-												<span class="status pink"></span>
-												in progress
-											</td>
-										</tr>
-										<tr>
-											<td>ushop app</td>
-											<td>Mobile team</td>
-											<td>
-												<span class="status orange"></span>
-												pending
-											</td>
-										</tr>
-										<tr>
-											<td>UI/UX Design</td>
-											<td>UI team</td>
-											<td>
-												<span class="status purple"></span>
-												review
-											</td>
-										</tr>
-										<tr>
-											<td>Web Development</td>
-											<td>Frontend</td>
-											<td>
-												<span class="status pink"></span>
-												in progress
-											</td>
-										</tr>
-										<tr>
-											<td>ushop app</td>
-											<td>Mobile team</td>
-											<td>
-												<span class="status orange"></span>
-												pending
-											</td>
-										</tr>
-									</tbody>
 								</table>
 							</div>
 						</div>
@@ -186,8 +208,7 @@
 					<div class="card">
 						<div class="card-header">
 							<h3>Barangay Officials </h3>
-
-							<button>See all <span class="las la-arrow-down"></span></button>
+							<button> <span class="las la-plus"></span> New Barangay Official</button>
 						</div>
 						<div class="card-body">
 							<div class="customer">

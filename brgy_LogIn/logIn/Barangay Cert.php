@@ -39,10 +39,6 @@
                         <span>Certificate Insurance</span></a>
                 </li>
                 <li>
-                    <a href="Barangay Acc.php"><span class="las la-circle"></span>
-                        <span>Accounts</span></a>
-                </li>
-                <li>
                     <a href="Barangay Config.php"><span class="las la-cog"></span>
                         <span>Barangay Config</span></a>
                 </li>

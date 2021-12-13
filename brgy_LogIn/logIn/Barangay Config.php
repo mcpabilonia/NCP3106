@@ -39,10 +39,6 @@
                         <span>Certificate Insurance</span></a>
                 </li>
                 <li>
-                    <a href="Barangay Acc.php"><span class="las la-circle"></span>
-                        <span>Accounts</span></a>
-                </li>
-                <li>
                     <a href="Barangay Config.php" class="active"><span class="las la-cog"></span>
                         <span>Barangay Config</span></a>
                 </li>
@@ -75,8 +71,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Admin</h3>
-
-
+                            <a href="newAcc.php"><button><span class="las la-plus"></span>New Admin</button></a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -95,6 +90,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="view Admin.php"><button type="button" class="btn btn-primary"> <i class="lar la-eye"></i></button></a>
+                                                <a href="update Admin.php"><button type="button" class="btn btn-danger"><i class="las la-user-edit"></i></button></a>
+                                                <button type="button" class="btn btn-delete"><i class="las la-trash"></i></button>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

@@ -82,22 +82,22 @@ VALUES (?,?,?,?,?,?,?)";
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter first name">
-						<input class="input100" type="text" name="admin_first_name" placeholder="First Name" required>
+						<input class="input100" type="text" pattern="[A-Za-z]+" name="admin_first_name" placeholder="First Name" required>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter last name">
-						<input class="input100" type="text" name="admin_last_name" placeholder="Last Name" required>
+						<input class="input100" type="text" pattern="[A-Za-z]+" name="admin_last_name" placeholder="Last Name" required>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter middle name">
-						<input class="input100" type="text" name="admin_middle_name" placeholder="Middle Name" required>
+						<input class="input100" type="text" pattern="[A-Za-z]+" name="admin_middle_name" placeholder="Middle Name" required>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter birthday">
-						<input class="input100" type="date" name="admin_birth_date" required>
+						<input class="input100" type="date" min="1960-01-01" max="2021-01-01" name="admin_birth_date" required>
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
@@ -117,7 +117,7 @@ VALUES (?,?,?,?,?,?,?)";
 					</div>
 					<div style="text-align: center; margin-top: 20px;">
 						<a class="txt1" href="Login.php">
-							Back
+							Back	
 						</a>
 					</div>
 				</form>

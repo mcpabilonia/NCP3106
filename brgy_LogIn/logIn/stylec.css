@@ -91,7 +91,7 @@
 	
 }
 header{
-	background:#fbfbf2;
+	background:#fff;
 	display:flex;
 	justify-content:space-between;
 	padding:1rem 1.5rem;
@@ -183,7 +183,7 @@ main{
 	margin-top: 3.5rem;
 	display: grid; 
 	grid-gap:2rem;
-	grid-template-columns: 65% auto;
+	grid-template-columns: 31% auto;
 }
 .card{
 	background: #fff;

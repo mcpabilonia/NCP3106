@@ -91,7 +91,7 @@
 	
 }
 header{
-	background:#fbfbf2;
+	background:#fff;
 	display:flex;
 	justify-content:space-between;
 	padding:1rem 1.5rem;
@@ -399,6 +399,13 @@ tr td:last-child{
 .btn-danger{
     background-color: #be562d;
     border-color: #be562d;
+    padding: 1px 5px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.btn-delete{
+    background-color: #ce2525;
+    border-color: #ce2525;
     padding: 1px 5px;
     font-size: 25px;
     border-radius: 10px;
