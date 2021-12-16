@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    <?php require_once 'process.php'; ?>
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
@@ -35,6 +36,7 @@
                 </div>
                 <div class="card-body">
                     <form name="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return checkValidates()" method="post">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <h2 class="title" style="color: black; padding-bottom: 20px;">BASIC INFORMATION</h2>
                         <!-- NAME -->
                         <div class="form-row ">
@@ -43,19 +45,19 @@
                                 <div class="row row-space">
                                     <div class="col-4">
                                         <div class="input-group-desc">
-                                            <input disabled class="input--style-5 " placeholder="Last Name" type="text" name="family_name">
+                                            <input disabled class="input--style-5 " value="<?php echo $family_name; ?>" placeholder="Last Name" type="text" name="family_name">
 
                                         </div>
                                     </div>
                                     <div class="col-1">
                                         <div class="input-group-desc">
-                                            <input disabled class="input--style-5 " placeholder="First Name" type="text" name="first_name">
+                                            <input disabled class="input--style-5 " value="<?php echo $first_name; ?>" placeholder="First Name" type="text" name="first_name">
 
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="input-group-desc">
-                                            <input disabled class="input--style-5" placeholder="Middle Name" type="text" name="middle_name">
+                                            <input disabled class="input--style-5" value="<?php echo $middle_name; ?>" placeholder="Middle Name" type="text" name="middle_name">
 
                                         </div>
                                     </div>
@@ -67,7 +69,7 @@
                             <div class="name">Alias</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input disabled class="input--style-5" placeholder="Alias" type="text" name="alias">
+                                    <input disabled class="input--style-5" value="<?php echo $alias; ?>" placeholder="Alias" type="text" name="alias">
                                 </div>
                             </div>
                         </div>
@@ -76,7 +78,7 @@
                             <div class="name">Face Marks</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input disabled class="input--style-5" placeholder="Face Marks" type="text" name="face_marks">
+                                    <input disabled class="input--style-5" value="<?php echo $face_marks; ?>" placeholder="Face Marks" type="text" name="face_marks">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +89,7 @@
                                 <div class="row row-space">
                                     <div class="col-1">
                                         <div class="input-group">
-                                            <input disabled class="input--style-5" style="height: 35px; width: 170px;" placeholder="Birthday" type="date" name="birth_date">
+                                            <input disabled class="input--style-5" style="height: 35px; width: 170px;" value="<?php echo $birth_date; ?>" placeholder="Birthday" type="date" name="birth_date">
                                         </div>
                                     </div>
 
@@ -95,7 +97,7 @@
                                     <div class="name" style="margin-top: 5px; margin-right: 0px;">Birthplace</div>
                                     <div class="col-1">
                                         <div class="input-group">
-                                            <input disabled class="input--style-5" placeholder="Birthplace" type="text" name="birth_place">
+                                            <input disabled class="input--style-5" value="<?php echo $birth_place; ?>" placeholder="Birthplace" type="text" name="birth_place">
                                         </div>
                                     </div>
                                 </div>
@@ -111,8 +113,8 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="sex">
                                                     <option disabled="disabled" selected="selected">Gender</option>
-                                                    <option>Male</option>
-                                                    <option>Female</option>
+                                                    <option <?php if ($sex == "Male") echo "selected" ?>>Male</option>
+                                                    <option <?php if ($sex == "Female") echo "selected" ?>>Female</option>
 
                                                 </select>
                                                 <div class="select-dropdown"></div>
@@ -126,10 +128,10 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="civil_status">
                                                     <option disabled="disabled" selected="selected">Civil Status</option>
-                                                    <option>Single</option>
-                                                    <option>Married</option>
-                                                    <option>Separated</option>
-                                                    <option>Widowed</option>
+                                                    <option <?php if ($civil_status == "Single") echo "selected" ?>>Single</option>
+                                                    <option <?php if ($civil_status == "Married") echo "selected" ?>>Married</option>
+                                                    <option <?php if ($civil_status == "Separated") echo "selected" ?>>Separated</option>
+                                                    <option <?php if ($civil_status == "Widowed") echo "selected" ?>>Widowed</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -143,7 +145,7 @@
                             <div class="name">Nationality</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="Nationality" type="text" name="nationality">
+                                    <input disabled class="input--style-5" value="<?php echo $nationality; ?>" placeholder="Nationality" type="text" name="nationality">
                                 </div>
                             </div>
                         </div>
@@ -152,7 +154,7 @@
                             <div class="name">Religion</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="Religion" type="text" name="religion">
+                                    <input disabled class="input--style-5" value="<?php echo $religion; ?>" placeholder="Religion" type="text" name="religion">
                                 </div>
                             </div>
                         </div>
@@ -163,7 +165,7 @@
                                 <div class="row row-space">
                                     <div class="col-1">
                                         <div class="input-group" style="padding-left: 15px;">
-                                            <input disabled class="input--style-5" style="height: 35px; width: 170px;" placeholder="Occupation" type="text" name="occupation">
+                                            <input disabled class="input--style-5" style="height: 35px; width: 170px;" value="<?php echo $occupation; ?>" placeholder="Occupation" type="text" name="occupation">
                                         </div>
                                     </div>
 
@@ -174,17 +176,17 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="sector">
                                                     <option disabled="disabled" selected="selected">Sector</option>
-                                                    <option>Private</option>
-                                                    <option>Public</option>
-                                                    <option>Government</option>
-                                                    <option>Unemployed</option>
-                                                    <option>Out of School Youth (OSY)</option>
-                                                    <option>Out of School Children (OSC)</option>
-                                                    <option>Person with Disability (PWD)</option>
-                                                    <option>Senior Citizen (SC)</option>
-                                                    <option>Overseas Filipino Workers (OFW)</option>
-                                                    <option>Solo Parent</option>
-                                                    <option>Indigenous People</option>
+                                                    <option <?php if ($sector == "Private") echo "selected" ?>>Private</option>
+                                                    <option <?php if ($sector == "Public") echo "selected" ?>>Public</option>
+                                                    <option <?php if ($sector == "Government") echo "selected" ?>>Government</option>
+                                                    <option <?php if ($sector == "Unemployed") echo "selected" ?>>Unemployed</option>
+                                                    <option <?php if ($sector == "Out of School Youth (OSY)") echo "selected" ?>>Out of School Youth (OSY)</option>
+                                                    <option <?php if ($sector == "Out of School Children (OSC)") echo "selected" ?>>Out of School Children (OSC)</option>
+                                                    <option <?php if ($sector == "Person with Disability (PWD)") echo "selected" ?>>Person with Disability (PWD)</option>
+                                                    <option <?php if ($sector == "Senior Citizen (SC)") echo "selected" ?>>Senior Citizen (SC)</option>
+                                                    <option <?php if ($sector == "Overseas Filipino Workers (OFW)") echo "selected" ?>>Overseas Filipino Workers (OFW)</option>
+                                                    <option <?php if ($sector == "Solo Parent") echo "selected" ?>>Solo Parent</option>
+                                                    <option <?php if ($sector == "Indigenous People<") echo "selected" ?>>Indigenous People</option>
                                                     <option>Others</option>
 
                                                 </select>
@@ -200,7 +202,7 @@
                             <div class="name">Spouse's Name</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="Spouse's Name" type="text" name="spouse_name">
+                                    <input disabled class="input--style-5" placeholder="Spouse's Name" value="<?php echo $spouse_name; ?>" type="text" name="spouse_name">
                                 </div>
                             </div>
                         </div>
@@ -210,7 +212,7 @@
                             <div class="name">Spouse's Occupation</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="Spouse's Occupation" type="text" name="spouse_occupation">
+                                    <input disabled class="input--style-5" placeholder="Spouse's Occupation" value="<?php echo $spouse_occupation; ?>" type="text" name="spouse_occupation">
                                 </div>
                             </div>
                         </div>
@@ -224,8 +226,8 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="voter_status">
                                                     <option disabled="disabled" selected="selected">Status</option>
-                                                    <option>Yes</option>
-                                                    <option>No</option>
+                                                    <option <?php if ($voter_status == "Yes") echo "selected" ?>>Yes</option>
+                                                    <option <?php if ($voter_status == "No") echo "selected" ?>>No</option>
 
                                                 </select>
                                                 <div class="select-dropdown"></div>
@@ -237,8 +239,8 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="voter_active">
                                                     <option disabled="disabled" selected="selected">If Yes</option>
-                                                    <option>Active</option>
-                                                    <option>Inactive</option>
+                                                    <option <?php if ($voter_active == "Active") echo "selected" ?>>Active</option>
+                                                    <option <?php if ($voter_active == "Inactive") echo "selected" ?>>Inactive</option>
 
                                                 </select>
                                                 <div class="select-dropdown"></div>
@@ -255,7 +257,7 @@
                             <div class="name">City Address</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="City Address" type="text" name="city_address">
+                                    <input disabled class="input--style-5" placeholder="City Address" value="<?php echo $city_address; ?>" type="text" name="city_address">
                                 </div>
                             </div>
                         </div>
@@ -264,7 +266,7 @@
                             <div class="name">Provincial Address</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="Provincial Address" type="text" name="prov_address">
+                                    <input disabled class="input--style-5" placeholder="Provincial Address" value="<?php echo $prov_address; ?>" type="text" name="prov_address">
                                 </div>
                             </div>
                         </div>
@@ -273,7 +275,7 @@
                             <div class="name">Purok</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled disabled class="input--style-5" placeholder="Purok" type="text" name="purok">
+                                    <input disabled class="input--style-5" value="<?php echo $purok; ?>" placeholder="Purok" type="text" name="purok">
                                 </div>
                             </div>
                         </div>
@@ -284,12 +286,12 @@
                                 <div class="row row-space">
                                     <div class="col-1">
                                         <div class="input-group" style="padding-left: 15px;">
-                                            <input disabled class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 1" type="numbers" name="home_numone">
+                                            <input disabled class="input--style-5" value="<?php echo $home_numone; ?>" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 1" type="numbers" name="home_numone">
                                         </div>
                                     </div>
                                     <div class="col-1">
                                         <div class="input-group">
-                                            <input disabled class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 2 (optional)" type="numbers" name="home_numtwo">
+                                            <input disabled class="input--style-5" value="<?php echo $home_numtwo; ?>" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 2 (optional)" type="numbers" name="home_numtwo">
                                         </div>
                                     </div>
                                 </div>
@@ -302,12 +304,12 @@
                                 <div class="row row-space">
                                     <div class="col-1">
                                         <div class="input-group" style="padding-left: 15px;">
-                                            <input disabled class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 1" type="numbers" name="mob_numone">
+                                            <input disabled class="input--style-5" value="<?php echo $mob_numone; ?>" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 1" type="numbers" name="mob_numone">
                                         </div>
                                     </div>
                                     <div class="col-1">
                                         <div class="input-group">
-                                            <input disabled class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 2 (optional)" type="numbers" name="mob_numtwo">
+                                            <input disabled class="input--style-5" value="<?php echo $mob_numtwo; ?>" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 2 (optional)" type="numbers" name="mob_numtwo">
                                         </div>
                                     </div>
                                 </div>
@@ -318,7 +320,7 @@
                             <div class="name">E-mail</div>
                             <div class="value">
                                 <div class="input-group" style="padding-left: 15px;">
-                                    <input disabled class="input--style-5" placeholder="E-mail" type="text" name="email">
+                                    <input disabled class="input--style-5" value="<?php echo $email; ?>" placeholder="E-mail" type="text" name="email">
                                 </div>
                             </div>
                         </div>
@@ -334,8 +336,8 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="resident_type">
                                                     <option disabled="disabled" selected="selected">Resident Type</option>
-                                                    <option>Rentee</option>
-                                                    <option>Native</option>
+                                                    <option <?php if ($resident_type == "Rentee") echo "selected" ?>>Rentee</option>
+                                                    <option <?php if ($resident_type == "Native") echo "selected" ?>>Native</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>
@@ -354,9 +356,9 @@
                                             <div class="rs-select2 js-select-simple select--no-search">
                                                 <select disabled name="resident_status">
                                                     <option disabled="disabled" selected="selected">Resident Status</option>
-                                                    <option>Active</option>
-                                                    <option>Inactive</option>
-                                                    <option>Deceased</option>
+                                                    <option <?php if ($resident_status == "Active") echo "selected" ?>>Active</option>
+                                                    <option <?php if ($resident_status == "Inactive") echo "selected" ?>>Inactive</option>
+                                                    <option <?php if ($resident_status == "Deceased") echo "selected" ?>>Deceased</option>
                                                 </select>
                                                 <div class="select-dropdown"></div>
                                             </div>

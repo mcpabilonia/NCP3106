@@ -316,7 +316,7 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
               <div class="name">City Address</div>
               <div class="value">
                 <div class="input-group" style="padding-left: 15px;">
-                  <input required class="input--style-5" pattern="[a-zA-Z0-9-]" placeholder="City Address" type="text" name="city_address">
+                  <input required class="input--style-5" placeholder="City Address" type="text" name="city_address">
                 </div>
               </div>
             </div>
@@ -325,7 +325,7 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
               <div class="name">Provincial Address</div>
               <div class="value">
                 <div class="input-group" style="padding-left: 15px;">
-                  <input required class="input--style-5" pattern="[a-zA-Z0-9-]" placeholder="Provincial Address" type="text" name="prov_address">
+                  <input required class="input--style-5" placeholder="Provincial Address" type="text" name="prov_address">
                 </div>
               </div>
             </div>
@@ -350,7 +350,7 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                   </div>
                   <div class="col-1">
                     <div class="input-group">
-                      <input required class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 2 (optional)" type="numbers" name="home_numtwo">
+                      <input class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Home Number 2 (optional)" type="numbers" name="home_numtwo">
                     </div>
                   </div>
                 </div>
@@ -368,7 +368,7 @@ VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                   </div>
                   <div class="col-1">
                     <div class="input-group">
-                      <input required class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 2 (optional)" type="numbers" name="mob_numtwo">
+                      <input class="input--style-5" pattern="[0-9]+" minlength="11" maxlength="11" style="height: 35px; width: 220px;" placeholder="Mobile Number 2 (optional)" type="numbers" name="mob_numtwo">
                     </div>
                   </div>
                 </div>

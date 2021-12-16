@@ -389,3 +389,24 @@ tr td:last-child{
 		grid-template-columns: 100%;
 	}
 }
+.btn-primary{
+    background-color: #3b6db8;
+    border-color: #3b6db8;
+    padding: 1px 5px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.btn-danger{
+    background-color: #be562d;
+    border-color: #be562d;
+    padding: 1px 5px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.btn-delete{
+    background-color: #ce2525;
+    border-color: #ce2525;
+    padding: 1px 5px;
+    font-size: 25px;
+    border-radius: 10px;
+}

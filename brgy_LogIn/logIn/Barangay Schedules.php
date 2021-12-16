@@ -78,6 +78,7 @@
                                 <table width="100%">
                                     <thead>
                                         <tr>
+                                            <td>Action</td>
                                             <td>Date Entry</td>
                                             <td>Task Name</td>
                                             <td>Start Date</td>

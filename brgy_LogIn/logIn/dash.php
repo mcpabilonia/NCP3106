@@ -29,12 +29,8 @@
 						<span>Dashboard</span></a>
 				</li>
 				<li>
-					<a href="Barangay Info.php"><span class="las la-calendar"></span>
+					<a href="Barangay Info.php"><span class="las la-users"></span>
 						<span>Resident Information</span></a>
-				</li>
-				<li>
-					<a href="Barangay Schedules.php"><span class="las la-calendar"></span>
-						<span>Settlement Schedules</span></a>
 				</li>
 				<li>
 					<a href="Barangay Cert.php"><span class="las la-certificate"></span>
@@ -57,10 +53,9 @@
 				Dashboard
 			</h2>
 			<div class="user-wrapper">
-				<img src="kpop.jpg" width="40px" height="40px" alt="">
 				<div>
-					<h4>Albert - Jonniel T. Vicente</h4>
-					<small>Member</small>
+					<h4>ALEX</h4>
+					<small>Admin</small>
 					<button type="button" class="button" onclick="logout()">LOG OUT <span class="las la-sign-out-alt"></span></button>
 				</div>
 			</div>
@@ -81,7 +76,6 @@
 						while ($row = mysqli_fetch_assoc($query_result)) {
 							$output = $row['count'];
 						}
-
 
 						$sql = "SELECT * FROM brgyy_db";
 
@@ -187,19 +181,29 @@
 						<div class="card-header">
 							<h3>Puroks/Areas</h3>
 
-							<button> <span class="las la-plus"></span> Add Purok</button>
+							<a href="Add Purok.php"><button> <span class="las la-plus"></span> Add Purok</button>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
 								<table width="100%">
 									<thead>
 										<tr>
+											<td>Action</td>
 											<td>Area Name</td>
 											<td>Area Count</td>
 											<td>Status</td>
 										</tr>
 									</thead>
 								</table>
+								<tbody>
+									<tr>
+										<td>
+											<a href="View Purok.php"><button type="button" class="btn btn-primary"><i class="lar la-eye"></i></button></a>
+											<a href="Update Purok.php"><button type="button" class="btn btn-danger"><i class="las la-user-edit"></i></button></a>
+											<button type="button" class="btn btn-delete"><i class="las la-trash"></i></button>
+										</td>
+									</tr>
+								</tbody>
 							</div>
 						</div>
 					</div>
@@ -208,8 +212,10 @@
 					<div class="card">
 						<div class="card-header">
 							<h3>Barangay Officials </h3>
-							<button> <span class="las la-plus"></span> New Barangay Official</button>
+
+							<a href="Add Official.html"><button> <span class="las la-plus"></span> New Barangay Official</button>
 						</div>
+
 						<div class="card-body">
 							<div class="customer">
 								<div class="info">

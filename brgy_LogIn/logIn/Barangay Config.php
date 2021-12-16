@@ -9,6 +9,17 @@
 </head>
 
 <body>
+	<?php require_once 'process.php';?>
+	<?php
+		if(isset($_SESSION['message'])):?>
+	<div class="alert alert-<?=$_SESSION['msg_type']?>">
+		
+		<?php
+			echo $_SESSION['message'];
+			unset($_SESSION['message']);
+		?>
+	</div>
+	<?php endif ?>
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -29,10 +40,6 @@
                 <li>
                     <a href="Barangay Info.php"><span class="las la-users"></span>
                         <span>Resident Information</span></a>
-                </li>
-                <li>
-                    <a href="Barangay Schedules.php"><span class="las la-calendar"></span>
-                        <span>Settlement Schedules</span></a>
                 </li>
                 <li>
                     <a href="Barangay Cert.php"><span class="las la-certificate"></span>
@@ -56,13 +63,14 @@
             </h2>
 
             <div class="user-wrapper">
-                <img src="kpop.jpg" width="40px" height="40px" alt="">
-                <div>
-                    <h4>Albert - Jonniel T. Vicente</h4>
-                    <small>Member</small>
-                    <button type="button" class="button" onclick="logout()">LOG OUT <span class="las la-sign-out-alt"></span></button>
-                </div>
-            </div>
+				<div class="user-wrapper">					
+					<div>
+					<h4>ALEX</h4>
+					<small>Admin</small>
+					<button type="button" class="button" onclick="logout()">LOG OUT <span class="las la-sign-out-alt"></span></button>
+				</div>
+				</div>
+			</div>
         </header>
         <main>
 
@@ -78,26 +86,41 @@
                                 <table width="100%">
                                     <thead>
                                         <tr>
-
+											<td>Action </td>
                                             <td>First Name </td>
+                                            <td>Middle Name</td>
                                             <td>Last Name</td>
-                                            <td>Middle Initial</td>
                                             <td>Birthdate</td>
-                                            <td>Gender</td>
-                                            <td>Age</td>
                                             <td>Username</td>
-
+											<td>Gender</td>
                                         </tr>
                                     </thead>
+                                    <?php
+										$conn = mysqli_connect("localhost", "root", "", "admin_brgy");
+										$sql = "SELECT * FROM admin_db";
+										$result = $conn->query($sql);
+									?>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <a href="view Admin.php"><button type="button" class="btn btn-primary"> <i class="lar la-eye"></i></button></a>
-                                                <a href="update Admin.php"><button type="button" class="btn btn-danger"><i class="las la-user-edit"></i></button></a>
-                                                <button type="button" class="btn btn-delete"><i class="las la-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+										<?php
+										if ($result->num_rows > 0) {
+											while ($row = $result->fetch_assoc()){?>
+												<tr>
+												<td>
+													<a href="processinfo.php?delete=<?php echo $row['id']; ?>"><button type="button" class="btn btn-delete"><i class="las la-trash"></i></button></a>
+												</td>
+												<td> <?php echo $row["admin_first_name"]?></td>	
+												<td> <?php echo $row["admin_middle_name"]?></td>	
+												<td> <?php echo $row["admin_last_name"]?></td>	
+												<td> <?php echo $row["admin_birth_date"]?></td>	
+												<td> <?php echo $row["admin_email"]?></td>	
+												<td> <?php echo $row["admin_gender"]?></td>	
+												</tr>
+										
+										<?php
+											}
+										}
+										?>
+									</tbody>
                                 </table>
                             </div>
                         </div>
