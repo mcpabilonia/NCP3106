@@ -213,7 +213,7 @@
 						<div class="card-header">
 							<h3>Barangay Officials </h3>
 
-							<a href="Add Official.html"><button> <span class="las la-plus"></span> New Barangay Official</button>
+							<a href="Add Official.php"><button> <span class="las la-plus"></span> New Barangay Official</button>
 						</div>
 
 						<div class="card-body">

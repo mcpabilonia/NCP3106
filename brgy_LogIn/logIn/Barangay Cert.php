@@ -59,23 +59,25 @@
 				<label for="nav-toggle">
 					<span class="las la-bars"></span>
 				</label>
-				Resident Information
+				Certificate Insurance
 			</h2>
 			<form action="searchcert.php" method="GET">
 				<div class="search-wrapper">
 					<span class="las la-search"></span>
-						<input type="text" required placeholder="Search here" name="search" value="<?php if(isset($_GET['search'])){echo $_GET['search'];}?>"/>
-						<input type="submit" />
-						<!--<button type="submit" class="button" style=" background-color: #800020; border-radius: 10px; color: #fff;font-size: .8rem; padding: .3rem 1rem; border: 1px solid #800020;">SEARCH</button>-->
+					<input type="text" required placeholder="Search here" name="search" value="<?php if (isset($_GET['search'])) {
+																									echo $_GET['search'];
+																								} ?>" />
+					<input type="submit" />
+					<!--<button type="submit" class="button" style=" background-color: #800020; border-radius: 10px; color: #fff;font-size: .8rem; padding: .3rem 1rem; border: 1px solid #800020;">SEARCH</button>-->
 				</div>
 			</form>
 			<div class="user-wrapper">
-				<div class="user-wrapper">					
+				<div class="user-wrapper">
 					<div>
-					<h4>ALEX</h4>
-					<small>Admin</small>
-					<button type="button" class="button" onclick="logout()">LOG OUT <span class="las la-sign-out-alt"></span></button>
-				</div>
+						<h4>ALEX</h4>
+						<small>Admin</small>
+						<button type="button" class="button" onclick="logout()">LOG OUT <span class="las la-sign-out-alt"></span></button>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -99,22 +101,22 @@
 											<td>Middle Name</td>
 											<td>Gender</td>
 											<td>Birthdate</td>
-											
+
 										</tr>
-									</thead>	
-									<tbody>		
+									</thead>
+									<tbody>
 										<?php
-									$conn = mysqli_connect("localhost", "root", "", "brgy_db");
-									$sql = "SELECT * FROM brgyy_db ORDER BY id ASC";
-									$result = $conn->query($sql);
-									?>
+										$conn = mysqli_connect("localhost", "root", "", "brgy_db");
+										$sql = "SELECT * FROM brgyy_db ORDER BY id ASC";
+										$result = $conn->query($sql);
+										?>
 									<tbody>
 										<?php
 										if ($result->num_rows > 0) {
 											while ($row = $result->fetch_assoc()) { ?>
 												<tr>
 													<td>
-														<a href="residency.php?edit=<?php echo $row['id']?>"><button type="button" class="btn btn-danger"><i class="las la-user-edit"></i></button></a>
+														<a href="residency.php?edit=<?php echo $row['id'] ?>"><button type="button" class="btn btn-danger"><i class="las la-user-edit"></i></button></a>
 														<a href="process.php?delete=<?php echo $row['id']; ?>"><button type="button" class="btn btn-delete"><i class="las la-trash"></i></button></a>
 													</td>
 													<td> <?php echo $row["resident_id"] ?></td>
@@ -129,7 +131,7 @@
 										<?php
 											}
 										}
-										?>					
+										?>
 									</tbody>
 								</table>
 							</div>
